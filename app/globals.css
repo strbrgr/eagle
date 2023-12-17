@@ -2,20 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 200 20% 98%;
-    --btn-background: 200 10% 91%;
-    --btn-background-hover: 200 10% 89%;
-    --foreground: 200 50% 3%;
-  }
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --color-bg: #111418;
+	--color-text: #d7d7d6;
+  --color-primary: #c2c2c1;
+  --color-primary-100: #a4a4a2;
+  --color-primary-200: #90908e;
+  --color-primary-300: #7E7E7B;
+  --color-primary-400: #676765;
+  --color-primary-500: #676765;
+  --color-primary-600: #3e3e3d;
+  --color-primary-700: #171A1F;
+}
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: 200 50% 3%;
-      --btn-background: 200 10% 9%;
-      --btn-background-hover: 200 10% 12%;
-      --foreground: 200 20% 96%;
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --color-bg: #111418;
+    --color-text: #d7d7d6;
+    --color-primary: #c2c2c1;
+    --color-primary-100: #a4a4a2;
+    --color-primary-200: #90908e;
+    --color-primary-300: #7E7E7B;
+    --color-primary-400: #676765;
+    --color-primary-500: #676765;
+    --color-primary-600: #3e3e3d;
+    --color-primary-700: #171A1F;
   }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
