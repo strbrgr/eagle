@@ -25,6 +25,5 @@ export default async function Dashboard() {
         Logout
       </button>
     </form>
-
   </>
 }
